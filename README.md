@@ -1,0 +1,1 @@
+Manual personalizado de comandos
