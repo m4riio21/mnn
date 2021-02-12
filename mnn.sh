@@ -32,12 +32,12 @@ function tr(){
 	echo -e "\n\t${yellow}Uso:${end}${gray} tr ${end}${yellow}'patternInicial' 'patternFinal' ${end}"
 	echo -e "\n\t${yellow}[-d ${end}${red}'pattern'${end}${yellow}]${end}${gray} Busca el pattern introducido en el input y lo borra (delete)${end}"
 	echo -e "\n\t${blue}[!] EJEMPLOS"
-	echo -e "\n\t\t${yellow} [*] cat file | tr [a-z] [A-Z]"
+	echo -e "\n\t\t${yellow} [*] cat file | tr [a-z] [A-Z] ${end}"
 	echo -e "\n\t\t${gray} Cambia todas las letras minusculas a mayusculas"
 	echo -ne "\n\t\t${yellow} [*] echo 'PID proceso: $PID' | tr ' ' "; echo "'\n'"
 	echo -e "\n\t\t${gray} Cambia los espacios a saltos de linea"
 	echo -e "\n\t\t${yellow} [*] echo 'Numero: 123' | tr [:digit:] "
-	echo -e "\n\t\t${gray} Tan solo muestra los digitos"
+	echo -e "\n\t\t${gray} Tan solo muestra los digitos\n"
 }	
 
 function awk(){
@@ -51,6 +51,12 @@ function awk(){
 	echo -e "\n\t${blue}[!] ESTRUCTURA (BÁSICA) DEL COMANDO${end}"
 	echo -ne "\n\t${yellow}awk -F'${end}${red}: , . /"; echo -e "${end}${yellow}' ${end}${yellow}{accion}"
 	echo -e "\n\t${blue}[!] EJEMPLOS"
+	echo -e "\n\t\t${yellow} [*] awk 'NF > ${red}5${yellow} { print \$0 }' fichero${end}"
+	echo -e "\n\t\t${gray} Imprime las lineas que tienen mas de ${red}5${end}${gray} campos"
+	echo -e "\n\t\t${yellow} [*] awk '{\$2 = \"\"; print}' fichero"
+	echo -e "\n\t\t${gray} Elimina el campo 2 de cada linea, y las imprime"
+	echo -e "\n\t\t${yellow} [*] awk 'NR > 1000 {print \$0}' fichero "
+	echo -e "\n\t\t${gray} Imprime a partir de la linea 1000 del fichero\n"
 
 }
 
