@@ -62,6 +62,17 @@ function awk(){
 
 function sed(){
 	echo -e "\n ${blue}[*]${end}${yellow} SED ${end}"
+	echo -e "\n\t${blue}[!] ESTRUCTURA (BÁSICA) DEL COMANDO${end}"
+	echo -e "\n\t${yellow} sed '${red}opt${yellow}/OldString/NewString/' donde opt es una de las ${red}opciones${yellow} del comando"
+	echo -e "\n\t${blue}[!] OPCIONES DEL COMANDO${end}"
+	echo -e "\n\t${yellow}[-i] ${end}${gray}Se coloca al final del comando para mantener los cambios en el fichero"
+	echo -e "\n\t${yellow}['s/] ${end}${gray}Sustituye el primer encuentro de la primera cadena por la nueva cadena"
+	echo -e "\n\t\t${blue}Para reemplazar ${red}n${blue} veces, se coloca el numero al final (/${red}n${blue}')${end}"
+	echo -e "\n\t\t${blue}Para reemplaza ${red}todos${blue} los encuentros, se coloca el parametro ${red}g${blue} al final (/${red}g${blue}')"
+	echo -e "\n\t\t${blue}Se puede especificar un numero, o rango de numeros para especificar las lineas a ejecutar el comando${end}"
+	echo -e "\n\t${yellow}[d']${gray} Elimina apariciones, lineas o patrones${end}"
+	echo -e "\n\t\t${blue} sed '2,4 d' fichero, ${gray} elimina el rango de lineas [2,4] "
+	echo -e "\n\t\t${blue} sed '2,$ d' fichero, ${gray} elimina de la linea 2 a la ultima ($==ultima) "
 }
 
 function error(){
